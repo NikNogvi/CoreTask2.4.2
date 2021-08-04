@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your page</title>
+</head>
+<body>
+
+<table border="1" cellpadding="10">
+  <tr>
+    <th>Id</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Name</th>
+    <th>Lastname</th>
+    <th>Age</th>
+    <th>Salary</th>
+  </tr>
+
+  <tr>
+    <td th:text="${user.getId()}"></td>
+    <td th:text="${user.getUsername()}"></td>
+    <td th:text="${user.getPassword()}"></td>
+    <td th:text="${user.getName()}"></td>
+    <td th:text="${user.getLastname()}"></td>
+    <td th:text="${user.getAge()}"></td>
+    <td th:text="${user.getSalary()}"></td>
+  </tr>
+</table>
+<br>
+<br>
+<form th:method="POST" th:action="@{/logout}">
+  <input type="submit" value="Logout"/>
+</form>
+<br><br>
+
+</body>
+</html>
